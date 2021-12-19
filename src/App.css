@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+/*----------сброс стилей----------*/
+/*убираем отступы и указываем box-sizing*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/*убираем стили браузера для ссылок и списков*/
+a {
+    text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul,
+ol,
+li {
+    list-style: none;
+}
+/*выравнивание по верхнему краю для всех изображений*/
+img {
+    vertical-align: top;
+}
+/*наследование размера и стииля шрифта для всех заголовков*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+/*указываем базовые стили*/
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #252B42;
+    background: #fafafa;
+}
+/*класс обертка для всего контента страницы*/
+.wrapper {
+    min-height: 100%;
+    overflow: hidden; /*Контент обрезается, без предоставления прокрутки.*/
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: bold;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Тех классы---------------------------------------------*/
+._container {
+
+    max-width: 600px;
+    padding: 0 15px;
+    margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.pauses{
+    display: flex;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.start_game{
+    height: 100%;
+    margin: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game_name{
+    text-align: center;
+    margin: 15px 0;
+    font-size: 42px;
+    color: pink;
+}
+
+.secondary_text{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: gray;
+}
+
+
+.cell{
+    width: 50px;
+    height: 50px;
+    border: 1px solid pink;
+    margin: 1px;
+}
+
+.row{
+    display: flex;
+}
+
+.food{
+    background: blue;
+    border-radius: 25%;
+}
+.food1{
+    background: green;
+    border-radius: 30%;
+}
+.food2{
+    background: red;
+    border-radius: 45%;
+}
+
+.snake{
+    background: pink;
+    border-radius: 50%;
+}
+.nameInput{
+    display: flex;
+    flex-direction: column;
 }

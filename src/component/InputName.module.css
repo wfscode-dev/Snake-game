@@ -1,0 +1,16 @@
+.inputName {
+    width: content-box;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: 1px solid pink;
+    text-align: center;
+    font-size: 24px;
+    color: gray;
+
+}
+
+.inputName:focus{
+    background: pink;
+    color: #fafafa;
+}
